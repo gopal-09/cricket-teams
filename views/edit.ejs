@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="ui menu">
+      <div class="ui container">
+        <div class="header item">
+          <a href="/" class="link">home</a>
+      
+        </div>
+        <a class="item">
+          blog
+        </a>
+        <a class="item">
+          contact
+        </a>
+        <a class="item">
+          Locations
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class=" ui container">
+      <form action="/edit/<%-club._id%>" class="ui form" method="POST">
+        <div class="'ui three fields">
+          <div class="field">
+            <label for="name" class="ui header green">Enter club name</label>
+            <input type="text" name="name" placeholder="enter club name" value="<%-club.name%>" id="name">
+       </div>
+       <div class="field">
+        <label for="players" class="ui header green">Enter player name</label>
+        <input type="text" name="players"  placeholder="enter player name" value="<%-club.players%>" id="player">
+   </div>
+   <div class="field">
+    <label for="coach" class="ui header green">Enter coach name</label>
+    <input type="text" name="coach"  placeholder="enter coach name" value="<%-club.coach%>" id="coach">
+</div>
+         </div>
+         <div class="field fluid">
+          <button type="submit" class="ui button green fluid ">Save</button>
+         </div>
+
+       </form> 
+      <br><br>
+      <table class="ui green table">
+        <thead>
+          <tr>
+          <th>
+            club name
+          </th>
+          <th>
+            player
+          </th>
+          <th>
+            coach
+          </th>
+          <th>Edit</th>
+          <th>Delete</th>
+          </tr>
+        </thead>
+        
+        
+      </table>
+    </div>
+</div>
+    <script src="/js/semantic.min.js"></script>
+</body>
+</html>
